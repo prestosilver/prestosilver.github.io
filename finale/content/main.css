@@ -1,0 +1,36 @@
+@font-face {
+  font-family: main;
+  src: url(font.ttf);
+}
+
+
+* {
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+}
+
+body {
+  font-family: main;
+  font-size: 48px;
+  text-align: center;
+  background: #fff;
+  margin: 0px;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  border: solid #888;
+  border-width: 0px 1px;
+  padding: 20px 100px;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+a {
+  color: #888;
+}
