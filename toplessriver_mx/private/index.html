@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/content/winbox.bundle.js"></script>
+  <link rel="stylesheet" href="/content/main.css">
+</head>
+
+<body>
+  <div class="content">
+    <!-- <li><a href="/finale">The grand Finale</a></li> -->
+  </div>
+  <script type="text/javascript">
+    var value = "";
+    function check() {
+      value = document.getElementById("pass").value;
+      if (value == "hmmcxnb7f4") box.close();
+      return false;
+    }
+    var box = new WinBox({
+      x: "center",
+      y: "center",
+      modal: true,
+      title: "Warning",
+      html: "<h1>Top Secret</h1>\
+            <form onsubmit=\"return check()\">\
+            <input type=\"text\" name=\"myText\" id=\"pass\">\
+            <input type=\"submit\" value=\"Submit Password\">\
+            </form>",
+      buttons: {}
+    });
+  </script>
+</body>
+
+</html>
