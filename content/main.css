@@ -12,7 +12,7 @@ body {
   font-family: main;
   font-size: 48px;
   text-align: center;
-  background: #fff;
+  background: #000;
   margin: 0px;
   min-height: 100vh;
 }
@@ -63,6 +63,7 @@ iframe {
 }
 
 nav {
+  background: #fff;
   max-width: 800px;
   width: 100%;
   border: 1px solid #888;
