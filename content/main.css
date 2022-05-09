@@ -31,12 +31,20 @@ body {
   overflow-x: hidden;
 }
 
-h1,
-h2 {
+h1 {
   margin: 0;
-  font-size: 1.5em;
+  line-height: 80%;
+  font-size: 144px;
   text-align: center;
 }
+
+h2 {
+  margin: 0;line-height: 80%;
+  font-size: 96px;
+  text-align: center;
+}
+
+
 
 a {
   color: #888;
@@ -116,6 +124,15 @@ left {
   width: 100%;
   padding-top: 20%;
   border: 1px solid #888;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.iframe-container-steam {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 25%;
+  border: 1px solid #0000;
   /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
