@@ -4,6 +4,7 @@
 <head>
   <link rel="stylesheet" href="/content/main.css">
   <title>/projects/markup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -28,6 +29,65 @@
 
     markup [options] [file1 file2 ...]
 
+    <h2>Syntax</h2>
+
+    <left>
+      <br />body := [propSec | textSec]+
+      <br />textSec := [textComment |
+      <br />textList |
+      <br />codeBlock |
+      <br />equ |
+      <br />tag |
+      <br />textHeading |
+      <br />textTable |
+      <br />textLine]+ textParEnd
+      <br />heading2 := `##` [`(` | `|` | `)` | `{` | `}` | `_` | `+` |
+      <br />`:` | `;` | `&lt;` | `&gt;` | `!` | text | num |
+      <br />`-` | `*` | `$` ]+ `\n`
+      <br />textParEnd := `\n`+
+      <br />textList := [listLevel3 |
+      <br />listLevel2 |
+      <br />listLevel1]+
+      <br />listLevel3 := `\t\t- ` [`(` | `|` | `)` | `{` | `}` | `_` | `+` |
+      <br />`:` | `;` | `&lt` | `&gt` | `!` | text | num |
+      <br />`-` | `*` | `$` ]+ `\n`
+      <br />listLevel2 := `\t- ` [`(` | `|` | `)` | `{` | `}` | `_` | `+` |
+      <br />`:` | `;` | `&lt;` | `>` | `!` | text | num |
+      <br />`-` | `*` | `$` ]+ `\n`
+      <br />listLevel1 := `- ` [`(` | `|` | `)` | `{` | `}` | `_` | `+` |
+      <br />`:` | `;` | `&lt;` | `>` | `!` | text | num |
+      <br />`-` | `*` | `$` ]+ `\n`
+      <br />equ := `$$` [`_` | `*` | `{` | `}` | `!` | `-` | `+` |
+      <br />`;` | `&lt;` | `>` | `(` | `)` | `=` | text |
+      <br />num]+ `$$\n`
+      <br />tag := `&lt;` text [`:` text]? `>\n`
+      <br />textHeading := [heading3 |
+      <br />heading2 |
+      <br />heading1 ]+
+      <br />heading3 := `###` [`(` | `|` | `)` | `{` | `}` | `_` | `+` |
+      <br />`:` | `;` | `&lt;` | `>` | `!` | text | num |
+      <br />`-` | `*` | `$` ]+ `\n`
+      <br />heading2 := `##` [`(` | `|` | `)` | `{` | `}` | `_` | `+` |
+      <br />`:` | `;` | `&lt;` | `>` | `!` | text | num |
+      <br />`-` | `*` | `$` ]+ `\n`
+      <br />heading1 := `#` [`(` | `|` | `)` | `{` | `}` | `_` | `+` |
+      <br />`:` | `;` | `&lt;` | `>` | `!` | text | num |
+      <br />`-` | `*` | `$` ]+ `\n`
+      <br />comment := `!` .* [`\n` | EOF]
+      <br />textLine := [bold |
+      <br />emph |
+      <br />text ]+ `\n`
+      <br />propSec := propDiv propLine+ propDiv `\n`*
+      <br />propDiv := `---\n`
+      <br />propLine := [`!`? text `|`]? text `:` text `\n`
+      <br />textTable := tableHeader [tableRow]+
+      <br />tableHeader := tableRow tableSplit
+      <br />tableRow := `|` [text `|`]+
+      <br />tableSplit := `|` [`-`+ `|`]+
+      <br />emphText := [`_` text `_`] | [`*` text `*`]
+      <br />boldText := [`__` text `__`] | [`**` text `**`]
+      <br />codeBlock := `\`\`\`` text? `\n` [text | `\n`] `\`\`\``
+      </p>
   </div>
 </body>
 
