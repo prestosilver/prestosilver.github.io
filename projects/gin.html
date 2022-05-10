@@ -2,15 +2,18 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="/content/main.css">
-  <title>/projects/hangover</title>
+  <title>/projects/gin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/content/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="/content/main.css">
+  <link rel="stylesheet" href="/content/highlight/styles/stackoverflow-light.min.css">
 </head>
 
 <body>
   <nav>
     <a href="/projects">&lt;</a>
-    <a href="/">Prestosilver</a>/<a href="/projects">Projects</a>/<a href="/projects/hangover.html">Hangover</a>
+    <a href="/">Prestosilver</a>/<a href="/projects">Projects</a>/<a href="/projects/gin.html">Gin</a>
   </nav>
   <div class="content">
     <h1>Gin</h1>
@@ -30,6 +33,47 @@
     <h2>Usage</h2>
 
     Gin introduces a template, called "Game" which can be used as a game loop.
+
+    <h2>Minimal example</h2>
+
+    <pre>
+      <code class="language-nim">
+import gin
+import gin/graphics
+
+Game:
+  var
+    background: Color # the background color
+
+  template Initialize() =
+    # get the game ready to load
+    setWindowName("Minimal gin game") # set the window title
+    setAppName("Minimal") # set the save folder name
+    setWindowSize(Point(X: 1024, Y: 600)) # set the window size
+    setDt(16) # set the frame rate to 60 fps
+    background = initColor(255, 255, 255) #ffffff
+
+  template drawLoading(pc: float, status: string): untyped =
+    # renders the loading screen
+    clearBuffer(background) # clear the screen
+
+  template Setup(): untyped =
+    # load resources
+    discard
+
+  template Update(dt: cuint) =
+    # main update function in loop
+    discard
+
+  template Draw(dt: cuint, ctx: GraphicsContext) =
+    # render the next frame
+    clearBuffer(background) # clear the screen
+  
+  template Close() =
+    # ran when the game is closed
+    discard
+      </code>
+    </pre>
 
     <h2>Games written in gin</h2>
     <ul>

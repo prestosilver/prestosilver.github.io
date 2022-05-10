@@ -3,12 +3,23 @@
   src: url(font.ttf);
 }
 
+@font-face {
+  font-family: code;
+  src: url(monoFont.ttf);
+}
+
 * {
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: none;
 }
 
-body {
+code {
+  font-size: 24px;
+  font-family: code;
+}
+
+body,
+.usertext {
   font-family: main;
   font-size: 48px;
   background: #ddd;
@@ -39,7 +50,8 @@ h1 {
 }
 
 h2 {
-  margin: 0;line-height: 80%;
+  margin: 0;
+  line-height: 80%;
   font-size: 96px;
   text-align: center;
 }
@@ -83,7 +95,7 @@ iframe {
   }
 
   .content {
-    padding: 0px 0px;
+    padding: 10px 10px;
     width: 100%;
   }
 }
