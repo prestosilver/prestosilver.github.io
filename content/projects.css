@@ -72,16 +72,21 @@ body .container img {
 
 
 body .container section:nth-of-type(1) {
+  /* Bugz */
+  background-color: #535353;
+}
+
+body .container section:nth-of-type(2) {
   /* Chesker */
   background-color: #45283c;
 }
 
-body .container section:nth-of-type(2) {
+body .container section:nth-of-type(3) {
   /* Finale */
   background-color: #fff;
 }
 
-body .container section:nth-of-type(3) {
+body .container section:nth-of-type(4) {
   /* Infinite progression */
   background-color: #000;
 }

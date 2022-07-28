@@ -4,9 +4,10 @@
 <head>
   <title>/projects/hangover</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script src="/content/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
   <link rel="stylesheet" href="/content/main.css">
+  <link rel="stylesheet" href="/content/highlight/styles/stackoverflow-light.min.css">
 </head>
 
 <body>
@@ -29,12 +30,46 @@
     <h2>Install</h2>
 
     run:
-    <pre><code class="language-shell">
-      $ nimble install <a href="http://github.com/bob16795/hangover">http://github.com/bob16795/hangover</a>
-    </code></pre>
+    <pre><code class="language-shell">$ nimble install hangover</code></pre>
 
     <h2>Usage</h2>
 
+    Like Gin, Hangover introduces a template, called "Game" which can be used as a game loop.
+    
+    <h2>Minimal example</h2>
+
+    <pre><code class="language-nim">import hangover
+
+Game:
+  var
+    bg: Color = newColor(0, 0, 0)
+
+  proc drawLoading(percent: float32, loadStatus: string, ctx: GraphicsContext) =
+    ## renders the loading screen
+    ## only updates when setPc or setStatus is called in Initialize
+    clearBuffer(ctx, bg)
+  
+  proc Initialize(ctx: var GraphicsContext) =
+    ## load content files
+    discard
+
+  proc Update(deltaTime: float)
+    ## process a frame event
+    discard
+  
+  proc Draw(ctx: var GraphicsContext) =
+    ## draws a frame
+    clearBuffer(ctx, bg)
+
+  proc closeGame() =
+    ## called when the game is closed 
+    discard</code></pre>
+    
+    <h2>Games written in hangover</h2>
+    <ul>
+      <li><a href="https://prestosilver.itch.io/chesker">Chesker</a></li>
+      <li><a href="https://prestosilver.itch.io/bugz">Bugz Bows & Curses</a></li>
+    </ul>
   </div>
 </body>
 
