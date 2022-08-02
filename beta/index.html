@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Prestosilver</title>
+    <script src="https://kit.fontawesome.com/3a549b1b6b.js" crossorigin="anonymous"></script>
+    <style>
+/* The animation code */
+@keyframes aHover {
+  from {
+    font-size: 8rem;
+  }
+  to {
+    font-size: 9rem;
+  }
+}
+
+@keyframes aUnhover {
+  from {
+    font-size: 9rem;
+  }
+  to {
+    font-size: 8rem;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 0px solid green;
+}
+
+.icons {
+  height: 10rem;
+}
+
+a, a:visited {
+  color: #ffffff; 
+  font-size: 8rem;
+  
+  animation-name: aUnhover;
+  animation-duration: 0.25s;
+}
+
+a:hover {
+  font-size: 9rem;
+  
+  animation-name: aHover;
+  animation-duration: 0.25s;
+  font-size: 9rem;
+}
+
+button {
+  background-color: #00000000;
+  border: 0px;
+  color: #ffffff; 
+  animation-name: aUnhover;
+  animation-duration: 0.25s;
+  font-size: 8rem;
+  text-align: center;
+  margin: auto;
+}
+
+button:hover {
+  text-align: center;
+  background-color: #00000000;
+  border: 0px;
+  color: #ffffff; 
+  animation-name: aHover;
+  animation-duration: 0.25s;
+  font-size: 9rem;
+  margin: auto;
+}
+
+.label {
+  font-size: 9rem;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 0px solid green;
+  padding: 0rem 1rem;
+  width: 10rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  height: 10rem;
+}
+
+
+body {
+  height: 100vh;
+  margin: 0px;
+  background-color: #252523;
+}
+    </style>
+  </head>
+
+  <body id="body">
+    
+    <div class="center">
+      <div id="ROOT"/>
+    </div>
+
+    <script type="text/javascript" src="beta/index.js"></script>
+
+  </body>
+</html>
