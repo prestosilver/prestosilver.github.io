@@ -1,6 +1,8 @@
 ## This demo shows how you can develop your own stateful components with Karax.
 
 import karax/vdom, karax/vstyles, karax/karax, karax/karaxdsl, karax/jdict, karax/jstrutils, karax/kdom
+import strutils
+import files/all
 
 type
   SocialImageData = object
@@ -14,37 +16,58 @@ type
   Carousel = ref object of Vcomponent
     list: seq[cstring]
     counter: int
+  
+  Bottom = ref object of Vcomponent
+    page: string
+  
+  Button = ref object of Vcomponent
+    page: string
 
 var
   GithubIcon: SocialImage
   DiscordIcon: SocialImage
+  SteamIcon: SocialImage
+  PlayIcon: SocialImage
+
   CarouselRef: Carousel
+  BottomRef: Bottom
+  DownButton: Button
 
 const
   data = [
     SocialImageData(icon: "fa-brands fa-github",  link: "http://github.com/bob16795"),
     SocialImageData(icon: "fa-brands fa-itch-io", link: "http://prestosilver.itch.io/"),
+    SocialImageData(icon: "fa-brands fa-steam-symbol", link: "https://store.steampowered.com/search/?developer=Prestosilver"),
+    SocialImageData(icon: "fa-brands fa-google-play", link: "https://play.google.com/store/apps/dev?id=7954891124376186534&hl=en&gl=US"),
   ]
   labels: seq[cstring] = @[
     cstring"Links",
-    cstring"Games"
+    cstring"Games",
+    cstring"School"
   ]
 
 proc renderImage(x: VComponent): VNode =
   var comp = x.SocialImage
   result = buildHtml(tdiv(class = "icon", style = style(StyleAttr.display, "inline"))):
-    a(href = comp.link):
+    a(class = "resize", href = comp.link):
       italic(class = comp.icon)
 
 template idx(i: int, total): int =
   ((i mod total) + total) mod total
 
-proc load(self: Carousel, idx: int) =
-  self.counter += 1
+proc loadUrl(url: string) =
   var loc = window.location.href
-  window.location.replace(loc.split("#")[0] & "#" & self.list[idx(self.counter, len self.list)])
-  markDirty(self)
+  window.location.replace(loc.split("#")[0] & "#" & url)
+  BottomRef.page = "#" & url
+  DownButton.page = "#" & url 
+  CarouselRef.markDirty()
+  BottomRef.markDirty()
+  DownButton.markDirty()
   redraw()
+
+proc load(self: Carousel, idx: int) =
+  self.counter = idx
+  loadUrl($self.list[idx(self.counter, len self.list)])
 
 proc renderCarousel(x: VComponent): VNode =
   var self = x.Carousel
@@ -52,13 +75,58 @@ proc renderCarousel(x: VComponent): VNode =
   return buildHtml(tdiv()):
     tdiv(class = "container"):
       tdiv(class = "flex-child"):
-        button(class = "left icon", onclick = proc() = load(self, self.counter - 1)):
+        button(class = "left icon resize", onclick = proc() = load(self, self.counter - 1)):
           italic(class = "fa-solid fa-angle-left")
       tdiv(class = "flex-child label"):
         text self.list[idx(self.counter, len self.list)]
       tdiv(class = "flex-child"):
-        button(class = "right icon", onclick = proc() = load(self, self.counter + 1)):
+        button(class = "right icon resize", onclick = proc() = load(self, self.counter + 1)):
           italic(class = "fa-solid fa-angle-right")
+
+proc renderButton(x: VComponent): VNode =
+  var self = x.Button
+ 
+  echo self.page
+  return buildHtml(tdiv()):
+    if self.page in ["#Games", "#Games-List"]:
+      tdiv(class = "center icons resize"):
+        button(class = "icon b resize", onclick = proc() = loadUrl("Games-List")):
+          italic(class = "fa-solid fa-angle-up")
+    elif self.page in ["#School", "#School-List"]:
+      tdiv(class = "center icons resize"):
+        button(class = "icon a resize", onclick = proc() = loadUrl("School-List")):
+          italic(class = "fa-solid fa-angle-up")
+
+proc renderBottom(x: VComponent): VNode =
+  var self = x.Bottom
+
+  return buildHtml(tdiv()):
+    if self.page == "#Games-List":
+      tdiv(class = "card", style = style(StyleAttr.marginTop, "0%")):
+        tdiv(style = style(StyleAttr.color, "#ffffff")):
+          tdiv(class = "center title"):
+            button(class = "icon", onclick = proc() = loadUrl("Games")):
+              italic(class = "fa-solid fa-angle-down")
+          verbatim(FILES["games-list"])
+    else:
+      tdiv(class = "card", style = style(StyleAttr.marginTop, "100%")):
+        tdiv(style = style(StyleAttr.color, "#ffffff")):
+          tdiv(class = "center title"):
+            button(class = "icon", onclick = proc() = loadUrl("Games")):
+              italic(class = "fa-solid fa-angle-down")
+          verbatim(FILES["games-list"])
+    if self.page == "#School-List":
+      tdiv(class = "card", style = style(StyleAttr.marginTop, "0%")):
+        tdiv(style = style(StyleAttr.color, "#ffffff")):
+          tdiv(class = "center title"):
+            button(class = "icon", onclick = proc() = loadUrl("School")):
+              italic(class = "fa-solid fa-angle-down")
+    else:
+      tdiv(class = "card", style = style(StyleAttr.marginTop, "100%")):
+        tdiv(style = style(StyleAttr.color, "#ffffff")):
+          tdiv(class = "center title"):
+            button(class = "icon", onclick = proc() = loadUrl("School")):
+              italic(class = "fa-solid fa-angle-down")
 
 proc carousel(nref: var Carousel, idx: int): Carousel =
   if nref == nil:
@@ -78,30 +146,59 @@ proc socialImage(nref: var SocialImage, id: int): SocialImage =
   else:
     return nref
 
+proc bottom(nref: var Bottom, page: string): Bottom =
+  if nref == nil:
+    nref = newComponent(Bottom, renderBottom)
+    nref.page = page
+    return nref
+  else:
+    return nref
+
+proc downButton(nref: var Button, page: string): Button =
+  if nref == nil:
+    nref = newComponent(Button, renderButton)
+    nref.page = page
+    return nref
+  else:
+    return nref
+
 proc createDom(data: RouterData): VNode =
   var
-    currentPage = "root"
-    carouselIdx = 0
-  if data.hashPart.startsWith("#Games"):
-    currentPage = "games"
-    carouselIdx = 1
-  if data.hashPart.startsWith("#Links"):
-    currentPage = "root"
-    carouselIdx = 0
+    tmp: string = $data.hashPart
+    currentPage = tmp.strip(chars = {'/'})
+  
+  if currentPage == "":
+    currentPage = "#Links"
+
+  var
+    carouselIdx = case currentPage:
+      of "#Links": 0
+      of "#Games": 1
+      of "#Games-List": 1
+      of "#School": 2
+      of "#School-List": 2
+      else: 0
     
   result = buildHtml(table):
     tdiv(style = style(StyleAttr.color, "#ffffff")):
-      tdiv(style = style(StyleAttr.color, "#ffffff")):
-        tdiv(class = "center title"):
-          text "Prestosilver"
+      tdiv(class = "center title"):
+        text "Prestosilver"
+      if currentPage in ["#Links", "#Games", "#Games-List" , "#School", "#School-List"]:
         carousel(CarouselRef, carouselIdx)
-        if currentPage == "root":
-          tdiv(class = "center icons"):
-            socialImage(GithubIcon, 0)
-            socialImage(DiscordIcon, 1)
-        if currentPage == "games":
-          tdiv(class = "center icons"):
-            socialImage(GithubIcon, 0)
-  
-
+      if currentPage == "#Links":
+        tdiv(class = "center icons"):
+          socialImage(GithubIcon, 0)
+          socialImage(DiscordIcon, 1)
+          socialImage(SteamIcon, 2)
+          socialImage(PlayIcon, 3)
+      elif currentPage in ["#Games", "#Games-List" , "#School", "#School-List"]:
+        downButton(DownButton, currentPage)
+      else:
+        tdiv(class = "center"):
+          tdiv(class = "label"):
+            text "404"
+        tdiv(class = "center icons"):
+          button(class = "icon", onclick = proc() = loadUrl("Links")):
+            italic(class = "fa-solid fa-angle-left")
+      bottom(BottomRef, currentPage)
 setRenderer createDom
