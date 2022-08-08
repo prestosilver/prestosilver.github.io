@@ -43,7 +43,7 @@ const
   labels: seq[cstring] = @[
     cstring"Links",
     cstring"Games",
-    cstring"School"
+    cstring"About"
   ]
 
 proc renderImage(x: VComponent): VNode =
@@ -92,9 +92,9 @@ proc renderButton(x: VComponent): VNode =
       tdiv(class = "center icons resize"):
         button(class = "icon b resize", onclick = proc() = loadUrl("Games-List")):
           italic(class = "fa-solid fa-angle-up")
-    elif self.page in ["#School", "#School-List"]:
+    elif self.page in ["#About", "#About-List"]:
       tdiv(class = "center icons resize"):
-        button(class = "icon a resize", onclick = proc() = loadUrl("School-List")):
+        button(class = "icon a resize", onclick = proc() = loadUrl("About-List")):
           italic(class = "fa-solid fa-angle-up")
 
 proc renderBottom(x: VComponent): VNode =
@@ -107,26 +107,32 @@ proc renderBottom(x: VComponent): VNode =
           tdiv(class = "center title"):
             button(class = "icon", onclick = proc() = loadUrl("Games")):
               italic(class = "fa-solid fa-angle-down")
-          verbatim(FILES["games-list"])
+          tdiv(class = "scroll"):
+            verbatim(FILES["games-list"])
     else:
       tdiv(class = "card", style = style(StyleAttr.marginTop, "100%")):
         tdiv(style = style(StyleAttr.color, "#ffffff")):
           tdiv(class = "center title"):
             button(class = "icon", onclick = proc() = loadUrl("Games")):
               italic(class = "fa-solid fa-angle-down")
-          verbatim(FILES["games-list"])
-    if self.page == "#School-List":
+          tdiv(class = "scroll"):
+            verbatim(FILES["games-list"])
+    if self.page == "#About-List":
       tdiv(class = "card", style = style(StyleAttr.marginTop, "0%")):
         tdiv(style = style(StyleAttr.color, "#ffffff")):
           tdiv(class = "center title"):
-            button(class = "icon", onclick = proc() = loadUrl("School")):
+            button(class = "icon", onclick = proc() = loadUrl("About")):
               italic(class = "fa-solid fa-angle-down")
+          tdiv(class = "scroll"):
+            verbatim(FILES["about-list"])
     else:
       tdiv(class = "card", style = style(StyleAttr.marginTop, "100%")):
         tdiv(style = style(StyleAttr.color, "#ffffff")):
           tdiv(class = "center title"):
-            button(class = "icon", onclick = proc() = loadUrl("School")):
+            button(class = "icon", onclick = proc() = loadUrl("About")):
               italic(class = "fa-solid fa-angle-down")
+          tdiv(class = "scroll"):
+            verbatim(FILES["about-list"])
 
 proc carousel(nref: var Carousel, idx: int): Carousel =
   if nref == nil:
@@ -175,15 +181,23 @@ proc createDom(data: RouterData): VNode =
       of "#Links": 0
       of "#Games": 1
       of "#Games-List": 1
-      of "#School": 2
-      of "#School-List": 2
+      of "#About": 2
+      of "#About-List": 2
       else: 0
+
+  document.title = case currentPage:
+    of "#Links": "Prestosilver - Links"
+    of "#Games": "Prestosilver - Games"
+    of "#About": "Prestosilver - About"
+    of "#Games-List": "Prestosilver - Games"
+    of "#About-List": "Prestosilver - About"
+    else: "Prestosilver"
     
   result = buildHtml(table):
     tdiv(style = style(StyleAttr.color, "#ffffff")):
       tdiv(class = "center title"):
         text "Prestosilver"
-      if currentPage in ["#Links", "#Games", "#Games-List" , "#School", "#School-List"]:
+      if currentPage in ["#Links", "#Games", "#Games-List" , "#About", "#About-List"]:
         carousel(CarouselRef, carouselIdx)
       if currentPage == "#Links":
         tdiv(class = "center icons"):
@@ -191,7 +205,7 @@ proc createDom(data: RouterData): VNode =
           socialImage(DiscordIcon, 1)
           socialImage(SteamIcon, 2)
           socialImage(PlayIcon, 3)
-      elif currentPage in ["#Games", "#Games-List" , "#School", "#School-List"]:
+      elif currentPage in ["#Games", "#Games-List" , "#About", "#About-List"]:
         downButton(DownButton, currentPage)
       else:
         tdiv(class = "center"):
@@ -201,4 +215,5 @@ proc createDom(data: RouterData): VNode =
           button(class = "icon", onclick = proc() = loadUrl("Links")):
             italic(class = "fa-solid fa-angle-left")
       bottom(BottomRef, currentPage)
+
 setRenderer createDom
