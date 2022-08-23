@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import './index.css';
 
 const App = () => (
-  <Router basename="/new">
+  <Router>
     <Routes>
       {routes.map(({ path, Component }, key) => (
         <Route path={path} key={key} element={<Component />} />
