@@ -6,6 +6,17 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:regular,bold,italic&subset=latin,latin-ext');
 
 @layer components {
+  .error {
+    @apply p-0 m-2 flex flex-col content-center justify-center items-center;
+    flex-grow: 1;
+  }
+  .error h1 {
+    @apply text-secondary;
+  }
+  .error a {
+    @apply text-xl;
+  }
+
   .sidebar-icon:not(.active) {
     @apply relative flex items-center justify-center
            h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
@@ -48,6 +59,12 @@
 
   .main {
     @apply fixed left-16 p-12 right-0 top-8 bottom-0;
+    overflow-y: auto;
+  }
+    
+  .main-error {
+    @apply fixed flex left-16 p-12 right-0 top-8 bottom-0
+           flex-col content-center;
     overflow-y: auto;
   }
 
