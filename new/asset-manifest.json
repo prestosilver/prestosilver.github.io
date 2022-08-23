@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/new/static/css/main.1cf766bb.chunk.css",
-    "main.js": "/new/static/js/main.934e9dbf.chunk.js",
-    "main.js.map": "/new/static/js/main.934e9dbf.chunk.js.map",
+    "main.css": "/new/static/css/main.e0e65929.chunk.css",
+    "main.js": "/new/static/js/main.575d8404.chunk.js",
+    "main.js.map": "/new/static/js/main.575d8404.chunk.js.map",
     "runtime-main.js": "/new/static/js/runtime-main.c3a2ca9b.js",
     "runtime-main.js.map": "/new/static/js/runtime-main.c3a2ca9b.js.map",
     "static/js/2.2c80a825.chunk.js": "/new/static/js/2.2c80a825.chunk.js",
     "static/js/2.2c80a825.chunk.js.map": "/new/static/js/2.2c80a825.chunk.js.map",
     "index.html": "/new/index.html",
-    "static/css/main.1cf766bb.chunk.css.map": "/new/static/css/main.1cf766bb.chunk.css.map",
+    "static/css/main.e0e65929.chunk.css.map": "/new/static/css/main.e0e65929.chunk.css.map",
     "static/js/2.2c80a825.chunk.js.LICENSE.txt": "/new/static/js/2.2c80a825.chunk.js.LICENSE.txt",
     "static/media/budwm.2cf27596.md": "/new/static/media/budwm.2cf27596.md",
     "static/media/clicktolose.5237a9c4.md": "/new/static/media/clicktolose.5237a9c4.md",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.c3a2ca9b.js",
     "static/js/2.2c80a825.chunk.js",
-    "static/css/main.1cf766bb.chunk.css",
-    "static/js/main.934e9dbf.chunk.js"
+    "static/css/main.e0e65929.chunk.css",
+    "static/js/main.575d8404.chunk.js"
   ]
 }
