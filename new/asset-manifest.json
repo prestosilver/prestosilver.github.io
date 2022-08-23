@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/new/static/css/main.9129fa17.chunk.css",
-    "main.js": "/new/static/js/main.e9853fe6.chunk.js",
-    "main.js.map": "/new/static/js/main.e9853fe6.chunk.js.map",
+    "main.css": "/new/static/css/main.af5d6d7c.chunk.css",
+    "main.js": "/new/static/js/main.cc51abea.chunk.js",
+    "main.js.map": "/new/static/js/main.cc51abea.chunk.js.map",
     "runtime-main.js": "/new/static/js/runtime-main.c3a2ca9b.js",
     "runtime-main.js.map": "/new/static/js/runtime-main.c3a2ca9b.js.map",
-    "static/js/2.2c80a825.chunk.js": "/new/static/js/2.2c80a825.chunk.js",
-    "static/js/2.2c80a825.chunk.js.map": "/new/static/js/2.2c80a825.chunk.js.map",
+    "static/js/2.f1fa53e9.chunk.js": "/new/static/js/2.f1fa53e9.chunk.js",
+    "static/js/2.f1fa53e9.chunk.js.map": "/new/static/js/2.f1fa53e9.chunk.js.map",
     "index.html": "/new/index.html",
-    "static/css/main.9129fa17.chunk.css.map": "/new/static/css/main.9129fa17.chunk.css.map",
-    "static/js/2.2c80a825.chunk.js.LICENSE.txt": "/new/static/js/2.2c80a825.chunk.js.LICENSE.txt",
+    "static/css/main.af5d6d7c.chunk.css.map": "/new/static/css/main.af5d6d7c.chunk.css.map",
+    "static/js/2.f1fa53e9.chunk.js.LICENSE.txt": "/new/static/js/2.f1fa53e9.chunk.js.LICENSE.txt",
     "static/media/budwm.2cf27596.md": "/new/static/media/budwm.2cf27596.md",
+    "static/media/bugz.10d16e6d.md": "/new/static/media/bugz.10d16e6d.md",
+    "static/media/chesker.f822eba0.md": "/new/static/media/chesker.f822eba0.md",
     "static/media/clicktolose.5237a9c4.md": "/new/static/media/clicktolose.5237a9c4.md",
+    "static/media/flashdrive-1.3df76a9e.md": "/new/static/media/flashdrive-1.3df76a9e.md",
     "static/media/g1.3c7bf55c.png": "/new/static/media/g1.3c7bf55c.png",
+    "static/media/g2.1bc2841a.png": "/new/static/media/g2.1bc2841a.png",
+    "static/media/g3.cdcf0651.png": "/new/static/media/g3.cdcf0651.png",
     "static/media/gin.e5351bcd.md": "/new/static/media/gin.e5351bcd.md",
     "static/media/hangover.cbcda2e1.md": "/new/static/media/hangover.cbcda2e1.md",
     "static/media/markup.29a26b20.md": "/new/static/media/markup.29a26b20.md",
@@ -23,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3a2ca9b.js",
-    "static/js/2.2c80a825.chunk.js",
-    "static/css/main.9129fa17.chunk.css",
-    "static/js/main.e9853fe6.chunk.js"
+    "static/js/2.f1fa53e9.chunk.js",
+    "static/css/main.af5d6d7c.chunk.css",
+    "static/js/main.cc51abea.chunk.js"
   ]
 }
