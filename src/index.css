@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:regular,bold,italic&subset=latin,latin-ext');
+
+@layer components {
+  .sidebar-icon:not(.active) {
+    @apply relative flex items-center justify-center
+           h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+           bg-light hover:bg-secondary hover:text-white
+           rounded-3xl hover:rounded-xl transition-all
+           ease-linear;
+  }
+  
+  .sidebar-icon.active {
+    @apply relative flex items-center justify-center
+           h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+           bg-secondary text-white
+           rounded-xl transition-all
+           ease-linear;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-14
+           rounded-md shadow-md
+           text-white bg-primary
+           text-xs font-bold
+           transition-all scale-0 origin-left;
+  }
+
+  .sidebar-divider {
+    @apply border-2 rounded-sm mr-2 ml-2 border-light;
+  }
+
+  .breadcrumb-divider {
+    @apply border-2 rounded-sm mt-2 mb-2 border-light w-0;
+  }
+
+  .crumb {
+    @apply m-4 content-center self-center;
+  }
+
+  body {
+    @apply bg-light;
+  }
+
+  .main {
+    @apply fixed left-16 p-12 right-0 top-8 bottom-0;
+    overflow-y: auto;
+  }
+
+  h1 {
+    @apply text-center text-white text-7xl m-8 font-bold;
+    font-family: 'Roboto', cursive;
+  }
+  
+  h2 {
+    @apply text-white text-5xl mt-4 mb-4 font-bold text-center;
+    font-family: 'Roboto', cursive;
+  }
+
+  a {
+    @apply text-secondary hover:underline;
+  }
+
+  p, li {
+    @apply text-white text-3xl;
+    font-family: 'Nunito Sans', cursive;
+  }
+
+  .frame-container {
+    @apply rounded-xl overflow-hidden
+           bg-primary m-8
+           flex flex-row transition-all
+           hover:scale-110;
+  }
+  
+  .frame-container-noanim {
+    @apply rounded-xl overflow-hidden
+           bg-primary m-8
+           flex flex-row transition-all;
+  }
+
+  .frame-desc h1 {
+    @apply bg-seclight m-0 text-2xl text-primary bg-secondary; 
+  }
+
+  .frame-desc p {
+    @apply m-0 pl-8 pr-8 pt-1 pb-1 text-xl text-white; 
+  }
+  
+  .frame-desc {
+    @apply w-[50%];
+  }
+  
+  .frame-body h1 {
+    @apply bg-seclight m-0 text-2xl text-primary bg-secondary; 
+  }
+
+  .frame-body p {
+    @apply m-0 p-8 text-xl text-white; 
+  }
+
+  .frame-body .center {
+    @apply text-center m-0 p-6 text-3xl text-white font-bold; 
+    font-family: 'Nunito Sans', cursive;
+    columns: 3;
+  }
+  
+  .frame-body {
+    @apply w-[100%];
+  }
+
+  a:nth-child(odd) .frame-container {
+    @apply flex-row-reverse;
+  }
+  
+  .frame-image {
+    @apply w-[50%];
+  }
+ 
+  .frame-image img {
+    @apply w-[100%];
+  }
+
+  ul {
+    @apply text-white;
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+
+  p img {
+    @apply rounded-xl overflow-hidden ml-auto mr-auto max-w-[100%] center;
+  }
+
+  pre {
+    @apply bg-primary mt-4 mb-2 p-4 overflow-auto rounded-xl;
+  }
+
+  code {
+    @apply text-white;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .frame-container {
+      @apply rounded-xl overflow-hidden
+             bg-primary m-8
+             flex flex-col-reverse
+             transition-all;
+    }
+  
+    .frame-image {
+      @apply w-[100%];
+    }
+  
+    .frame-desc {
+      @apply w-[100%];
+    }
+  
+    a:nth-child(odd) .frame-container {
+      @apply flex-col-reverse;
+    }
+    
+    .frame-body .center {
+      @apply text-center m-0 p-6 text-base text-white font-bold;   
+      columns: 2;
+    }
+
+    .frame-body p {
+      @apply m-0 p-4 text-base text-white; 
+    }
+
+    .frame-desc p {
+      @apply m-0 p-4 text-base text-white; 
+    }
+
+    .frame-body h1 {
+      @apply text-xl; 
+    }
+
+    .frame-desc h1 {
+      @apply text-xl; 
+    }
+
+    h1 {
+      @apply text-2xl;
+    }
+
+    .main {
+      @apply fixed left-16 p-4 right-0 top-8 bottom-0;
+      overflow-y: auto;
+    }
+  }
+}
