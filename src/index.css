@@ -69,12 +69,17 @@
   }
 
   h1 {
-    @apply text-center text-white text-7xl m-8 font-bold;
+    @apply text-center text-white text-7xl m-8 mt-0 font-bold;
     font-family: 'Roboto', cursive;
   }
   
   h2 {
     @apply text-white text-5xl mt-4 mb-4 font-bold text-center;
+    font-family: 'Roboto', cursive;
+  }
+  
+  h3 {
+    @apply text-white text-2xl mt-6 mb-0 font-bold;
     font-family: 'Roboto', cursive;
   }
 
@@ -101,7 +106,7 @@
   }
 
   .frame-desc h1 {
-    @apply bg-seclight m-0 text-2xl text-primary bg-secondary; 
+    @apply bg-seclight m-0 text-2xl text-primary bg-secondary px-4; 
   }
 
   .frame-desc p {
@@ -113,7 +118,7 @@
   }
   
   .frame-body h1 {
-    @apply bg-seclight m-0 text-2xl text-primary bg-secondary; 
+    @apply bg-seclight m-0 text-2xl text-primary bg-secondary px-4; 
   }
 
   .frame-body p {
@@ -157,13 +162,20 @@
   }
 
   code {
-    @apply text-white;
+    @apply text-white bg-primary rounded-lg px-2;
   }
 
   @media only screen and (max-width: 900px) {
     .frame-container {
       @apply rounded-xl overflow-hidden
-             bg-primary m-8
+             bg-primary mx-2 my-4
+             flex flex-col-reverse
+             transition-all;
+    }
+    
+    .frame-container-noanim {
+      @apply rounded-xl overflow-hidden
+             bg-primary mx-2 my-4
              flex flex-col-reverse
              transition-all;
     }
@@ -203,6 +215,18 @@
 
     h1 {
       @apply text-2xl;
+    }
+
+    h2 {
+      @apply text-xl;
+    }
+
+    h3 {
+      @apply text-lg;
+    }
+
+    p {
+      @apply text-base;
     }
 
     .main {
