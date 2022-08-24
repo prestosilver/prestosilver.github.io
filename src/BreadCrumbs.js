@@ -2,7 +2,6 @@ import './index.css';
 import { Link, useLocation, useParams, matchPath } from "react-router-dom";
 import routes from "./routes";
 
-
 function GetCrumbs() {
   const location = useLocation();
   const params = useParams();
@@ -40,11 +39,13 @@ const BreadCrumbs = () => {
   const crumbs = GetCrumbs();
 
   if (crumbs.length <= 1) {
-    <div className="fixed top-0 left-16 h-8 w-screen m-0
-                    flex flex-row content-center
-                    bg-med text-secondary shadow-lg">
-      <div className="breadcrumb-divider" />
-    </div>
+    return (
+      <div className="fixed top-0 left-16 h-8 w-screen m-0
+                      flex flex-row content-center
+                      bg-med text-secondary shadow-lg">
+        <div className="breadcrumb-divider" />
+      </div>
+    )
   }
 
   return  (
