@@ -44,6 +44,9 @@ const BreadCrumbs = () => {
                       flex flex-row content-center
                       bg-med text-secondary shadow-lg">
         <div className="breadcrumb-divider" />
+        <Link className="crumb" to="/">
+          Prestosilver
+        </Link>
       </div>
     )
   }

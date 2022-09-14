@@ -2,10 +2,12 @@ import p1 from "./pages/Images/p2.png";
 import p2 from "./pages/Images/p1.png";
 import p3 from "./pages/Images/p3.png";
 import p4 from "./pages/Images/p4.png";
+import p5 from "./pages/Images/p5.png";
 import p1text from "./pages/Content/hangover.md"
 import p2text from "./pages/Content/markup.md"
 import p3text from "./pages/Content/budwm.md"
 import p4text from "./pages/Content/gin.md"
+import p5text from "./pages/Content/posts/slim-1.md"
 
 import g1 from "./pages/Images/g1.png";
 import g2 from "./pages/Images/g2.png";
@@ -25,6 +27,7 @@ import b2text from "./pages/Content/posts/organize-1.md"
 
 const projects = [
   //TODO: ereader thing
+  { short: "slim-1", kind: 'project', image: p5, name: "Slim lang, a Object Oriented Concatanative Programming language", desc: "Slim op", file: p5text},
   { short: "files-1", kind: 'post', image: null, name: "How I keep my linux filesystem organized to prevent losing files", desc: "I swear, it's not as boring as it sounds.", file: b2text},
   { short: "bugz-1", kind: 'game', image: g2, name: "Bugz Bows and Curses", desc: "Bugz Bows and Curses is a procedurally generated rougelike revolving around completing Collections.", file: g2text},
   { short: "flashdrive-1", kind: 'post', image: null, name: "Making a raspberry pi based smart flashdrive", desc: "A flashdrive that sorts its self, impossible? Ask buildroot.", file: b1text},
