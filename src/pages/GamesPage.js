@@ -8,15 +8,17 @@ const GamePage = () => (
   <>
     <BreadCrumbs />
     <div className="main">
-      <h1>
-        Games
-      </h1>
-      
-      {projects
-        .filter(({kind}) => kind === 'game')
-        .map(({image, name, desc, short }, key) => (
-        <Frame image={image} kind="game" link={short} title={name} desc={desc} key={key} />
-      ))}
+      <div className="main-center">
+        <h1>
+          Games
+        </h1>
+        
+        {projects
+          .filter(({kind}) => kind === 'game')
+          .map(({image, name, desc, short }, key) => (
+          <Frame image={image} kind="game" link={short} title={name} desc={desc} key={key} />
+        ))}
+      </div>
     </div>
   </>
 )

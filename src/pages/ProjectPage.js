@@ -8,15 +8,17 @@ const ProjectPage = () => (
   <>
     <BreadCrumbs />
     <div className="main">
-      <h1>
-        Projects
-      </h1>
-      
-      {projects
-        .filter(({kind}) => kind === 'project')
-        .map(({image, name, desc, short }, key) => (
-        <Frame image={image} kind="project" link={short} title={name} desc={desc} key={key} />
-      ))}
+      <div className="main-center">
+        <h1>
+          Projects
+        </h1>
+        
+        {projects
+          .filter(({kind}) => kind === 'project')
+          .map(({image, name, desc, short }, key) => (
+          <Frame image={image} kind="project" link={short} title={name} desc={desc} key={key} />
+        ))}
+      </div>
     </div>
   </>
 )

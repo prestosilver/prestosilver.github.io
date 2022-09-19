@@ -6,7 +6,9 @@ const GameSubPage = ({post = ""}) => (
   <>
     <BreadCrumbs />
     <div className="main">
-      <PageComponent filter="game"/>
+      <div className="main-center">
+        <PageComponent filter="game"/>
+      </div>
     </div>
   </>
 )

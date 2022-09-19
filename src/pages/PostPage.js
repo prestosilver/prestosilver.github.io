@@ -8,15 +8,17 @@ const PostPage = () => (
   <>
     <BreadCrumbs />
     <div className="main">
-      <h1>
-        Posts
-      </h1>
+      <div className="main">
+        <h1>
+          Posts
+        </h1>
       
-      {projects
-        .filter(({kind}) => kind === 'post')
-        .map(({image, name, desc, short }, key) => (
-        <Frame image={image} kind="post" link={short} title={name} desc={desc} key={key} />
-      ))}
+        {projects
+          .filter(({kind}) => kind === 'post')
+          .map(({image, name, desc, short }, key) => (
+          <Frame image={image} kind="post" link={short} title={name} desc={desc} key={key} />
+        ))}
+      </div>
     </div>
   </>
 )

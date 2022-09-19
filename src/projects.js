@@ -7,7 +7,7 @@ import p1text from "./pages/Content/hangover.md"
 import p2text from "./pages/Content/markup.md"
 import p3text from "./pages/Content/budwm.md"
 import p4text from "./pages/Content/gin.md"
-import p5text from "./pages/Content/posts/slim-1.md"
+import p5text from "./pages/Content/slam.md"
 
 import g1 from "./pages/Images/g1.png";
 import g2 from "./pages/Images/g2.png";
@@ -27,10 +27,10 @@ import b2text from "./pages/Content/posts/organize-1.md"
 
 const projects = [
   //TODO: ereader thing
-  { short: "slim-1", kind: 'project', image: p5, name: "Slim lang, a Object Oriented Concatanative Programming language", desc: "Slim op", file: p5text},
+  { short: "slam-1", kind: 'project', image: p5, name: "Slam lang, a Object Oriented Concatanative Programming language", desc: "Slam op", file: p5text},
   { short: "files-1", kind: 'post', image: null, name: "How I keep my linux filesystem organized to prevent losing files", desc: "I swear, it's not as boring as it sounds.", file: b2text},
-  { short: "bugz-1", kind: 'game', image: g2, name: "Bugz Bows and Curses", desc: "Bugz Bows and Curses is a procedurally generated rougelike revolving around completing Collections.", file: g2text},
   { short: "flashdrive-1", kind: 'post', image: null, name: "Making a raspberry pi based smart flashdrive", desc: "A flashdrive that sorts its self, impossible? Ask buildroot.", file: b1text},
+  { short: "bugz-1", kind: 'game', image: g2, name: "Bugz Bows and Curses", desc: "Bugz Bows and Curses is a procedurally generated rougelike revolving around completing Collections.", file: g2text},
   { short: "chesker-1", kind: 'game', image: g3, name: "Chesker", desc: "Chesker is a chess engine that supports more than chess", file: g3text},
   { short: "hangover-1", kind: 'project', image: p1, name: "Hangover", desc: "Hangover is a full rewrite of gin which uses OpenGl as the graphics backend.", file: p1text},
   { short: "ctl-2", kind: 'game', image: g4, name: "Click To Lose -", desc: "Click To Lose Minus was a remake of my first IDLE game.", file: g4text},

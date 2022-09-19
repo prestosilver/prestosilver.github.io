@@ -6,7 +6,9 @@ const ProjectSubPage = ({post = ""}) => (
   <>
     <BreadCrumbs />
     <div className="main">
-      <PageComponent filter="project"/>
+      <div className="main-center">
+        <PageComponent filter="project"/>
+      </div>
     </div>
   </>
 )
