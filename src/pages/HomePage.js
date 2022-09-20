@@ -33,7 +33,6 @@ const HomePage = () => (
               <a href="mailto:prestosilver.ptp@gmail.com">Email</a><br/>
               <a href="https://prestosilver.itch.io">Itch</a><br/>
               <a href="https://discord.com/invite/vrVVXktmfV">discord</a><br/>
-              <a href="https://ko-fi.com/bob16795">Ko-Fi</a><br/>
               <a href="https://www.youtube.com/channel/UCn3KTSGb3DbbGlS3hYGmsTA">Youtube</a><br/>
               <a href="https://github.com/bob16795">Github</a><br/>
               <a href="https://play.google.com/store/apps/dev?id=7954891124376186534">Google Play</a><br/>
