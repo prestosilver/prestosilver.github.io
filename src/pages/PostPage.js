@@ -8,7 +8,7 @@ const PostPage = () => (
   <>
     <BreadCrumbs />
     <div className="main">
-      <div className="main">
+      <div className="main-center">
         <h1>
           Posts
         </h1>
