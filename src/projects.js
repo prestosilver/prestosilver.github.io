@@ -26,10 +26,9 @@ import b1text from "./pages/Content/posts/flashdrive-1.md"
 import b2text from "./pages/Content/posts/organize-1.md"
 
 const projects = [
-  //TODO: ereader thing
   { short: "slam-1", kind: 'project', image: p5, name: "Slam lang, a Object Oriented Concatanative Programming language", desc: "Slam op", file: p5text},
   { short: "files-1", kind: 'post', image: null, name: "How I keep my linux filesystem organized to prevent losing files", desc: "I swear, it's not as boring as it sounds.", file: b2text},
-  { short: "flashdrive-1", kind: 'post', image: null, name: "Making a raspberry pi based smart flashdrive", desc: "A flashdrive that sorts its self, impossible? Ask buildroot.", file: b1text},
+  // { short: "flashdrive-1", kind: 'post', image: null, name: "Making a raspberry pi based smart flashdrive", desc: "A flashdrive that sorts its self, impossible? Ask buildroot.", file: b1text},
   { short: "bugz-1", kind: 'game', image: g2, name: "Bugz Bows and Curses", desc: "Bugz Bows and Curses is a procedurally generated rougelike revolving around completing Collections.", file: g2text},
   { short: "chesker-1", kind: 'game', image: g3, name: "Chesker", desc: "Chesker is a chess engine that supports more than chess", file: g3text},
   { short: "hangover-1", kind: 'project', image: p1, name: "Hangover", desc: "Hangover is a full rewrite of gin which uses OpenGl as the graphics backend.", file: p1text},
