@@ -19,8 +19,9 @@ const HomePage = () => (
             </h1>
             <p>
               I am a CS major who loves to program. I have many small projects that I work on in my free time, these include games, software, and tools.
-              I am fluent in writing in Nim, Python, Html, CSS, C, Cpp, C#, x86asm, z80asm, Markdown, GDScript, and Slam.
+              I am fluent in writing in Zig, Nim, Python, Html, CSS, C, Cpp, C#, x86asm, z80asm, Markdown, GDScript, and Slam.
               I also have experience in Forth, Javascript, GLSL, and Ruby.
+              I plan to learn rust, TS, and Lua in the future.
               There are many hobbies I enjoy including Crochet, Book binding, Bowling, Papercraft, Doodling, and Sewing.
             </p>
           </div>
