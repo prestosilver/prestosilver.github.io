@@ -12,6 +12,6 @@ $ cd budwm
 $ make install
 ```
 
-## Insparation
+## Inspiration
 
 - [BudLabs](https://www.youtube.com/c/dubbeltumme)
