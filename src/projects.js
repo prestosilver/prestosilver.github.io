@@ -28,7 +28,7 @@ import b1text from "./pages/Content/posts/flashdrive-1.md"
 import b2text from "./pages/Content/posts/organize-1.md"
 
 const projects = [
-    { short: "sandeee-1", kind: 'game', image: p6, name: "Sandeee OS, a programming sandbox", desc: "I found making programming lanugages so much I decided to make a game that revolves around it.", file: p6text },
+    { short: "sandeee-1", kind: 'game', image: p6, name: "Sandeee OS, a programming sandbox", desc: "I liked making programming lanugages so much I decided to make a game that revolves around it.", file: p6text },
     { short: "slam-1", kind: 'project', image: p5, name: "Slam lang", desc: "An Object Oriented Concatanative Programming language.", file: p5text },
     { short: "files-1", kind: 'post', image: null, name: "How I keep my linux filesystem organized to prevent losing files", desc: "I swear, it's not as boring as it sounds.", file: b2text },
     // { short: "flashdrive-1", kind: 'post', image: null, name: "Making a raspberry pi based smart flashdrive", desc: "A flashdrive that sorts its self, impossible? Ask buildroot.", file: b1text},

@@ -23,3 +23,5 @@ Sandeee has 3 programming lanugages, allowing you to program however you want.
 ## Links
 
 - [itch](https://prestosilver.itch.io/sandeee-os)
+
+## EEE Sees all
