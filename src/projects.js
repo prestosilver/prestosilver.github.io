@@ -4,12 +4,16 @@ import p3 from "./pages/Images/p3.png";
 import p4 from "./pages/Images/p4.png";
 import p5 from "./pages/Images/p5.png";
 import p6 from "./pages/Images/p6.png";
+import p7 from "./pages/Images/p7.png";
 import p1text from "./pages/Content/hangover.md"
 import p2text from "./pages/Content/markup.md"
 import p3text from "./pages/Content/budwm.md"
 import p4text from "./pages/Content/gin.md"
 import p5text from "./pages/Content/slam.md"
 import p6text from "./pages/Content/sandeee.md"
+import p7text from "./pages/Content/budland.md"
+import p8text from "./pages/Content/bamba.md"
+import p9text from "./pages/Content/bamba2.md"
 
 import g1 from "./pages/Images/g1.png";
 import g2 from "./pages/Images/g2.png";
@@ -17,17 +21,23 @@ import g3 from "./pages/Images/g3.png";
 import g4 from "./pages/Images/g4.png";
 import g5 from "./pages/Images/g5.png";
 import g6 from "./pages/Images/g6.png";
+import g7 from "./pages/Images/g7.png";
 import g1text from "./pages/Content/clicktolose.md"
 import g2text from "./pages/Content/bugz.md"
 import g3text from "./pages/Content/chesker.md"
 import g4text from "./pages/Content/clicktoloseminus.md"
 import g5text from "./pages/Content/ip.md"
 import g6text from "./pages/Content/finale.md"
+import g7text from "./pages/Content/darkmatter.md"
 
 import b1text from "./pages/Content/posts/flashdrive-1.md"
 import b2text from "./pages/Content/posts/organize-1.md"
 
 const projects = [
+    { short: "darkmatter-1", kind: 'game', image: g7, name: "Dark Matter, Vanquish The Darkness With Your Light!", desc: "A shmup made for 1bit jam", file: g7text },
+    { short: "bamba-2", kind: 'project', image: null, name: "Bamba2, A zig based programming language.", desc: "Another attempt at making a llvm based lang.", file: p9text },
+    { short: "budland-1", kind: 'project', image: p7, name: "Budland, A Wayland window manager.", desc: "Budwm was too slow so Wayland + Zig.", file: p7text },
+    { short: "bamba-1", kind: 'project', image: null, name: "Bamba, A zig based programming language.", desc: "Another attempt at making a llvm based lang.", file: p8text },
     { short: "sandeee-1", kind: 'game', image: p6, name: "Sandeee OS, a programming sandbox", desc: "I liked making programming lanugages so much I decided to make a game that revolves around it.", file: p6text },
     { short: "slam-1", kind: 'project', image: p5, name: "Slam lang", desc: "An Object Oriented Concatanative Programming language.", file: p5text },
     { short: "files-1", kind: 'post', image: null, name: "How I keep my linux filesystem organized to prevent losing files", desc: "I swear, it's not as boring as it sounds.", file: b2text },

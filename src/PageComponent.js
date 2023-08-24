@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { useParams } from "react-router-dom";
 import posts from "./projects";
 import React, { useEffect, useState } from "react";
+import rehypeRaw from 'rehype-raw'
 
 function GetFilter(filter) {
   const params = useParams();
@@ -32,7 +33,7 @@ const PageComponent = ({filter}) => {
       <h1>
         {GetFilter(filter)}
       </h1>
-      <ReactMarkdown children={content.md} transformImageUri={(src, alt, title) => process.env.PUBLIC_URL + src}/>
+      <ReactMarkdown children={content.md} rehypePlugins={[rehypeRaw]} transformImageUri={(src, alt, title) => process.env.PUBLIC_URL + src}/>
     </div>
   )
 }
