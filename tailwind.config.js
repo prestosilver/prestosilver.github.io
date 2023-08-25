@@ -19,6 +19,7 @@ module.exports = {
         secondary: "#E54F5D",
         light: "#36393F",
         med: "#202225",
+        black: "#00000088",
         seclight: "#5E6978",
       }
     },

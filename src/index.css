@@ -100,18 +100,30 @@
     @apply text-white text-3xl;
     font-family: 'Nunito Sans', cursive;
   }
+  
+  .frame-bg {
+    @apply rounded-xl 
+           bg-black
+           m-8
+           hover:shadow-lg;
+  }
 
   .frame-container {
-    @apply rounded-xl overflow-hidden
-           bg-primary m-8
+    @apply rounded-xl overflow-hidden bg-primary
            flex flex-row transition-all
-           hover:scale-110;
+           w-[100%] h-[100%] transition-all;
+  }
+
+  .frame-bg:hover .frame-container {
+    @apply shadow-xl
+           -translate-x-3
+           -translate-y-3;
   }
   
   .frame-container-noanim {
     @apply rounded-xl overflow-hidden
            bg-primary m-8
-           flex flex-row transition-all;
+           flex flex-row;
   }
 
   .frame-desc h1 {
@@ -180,16 +192,15 @@
   }
 
   @media only screen and (max-width: 900px) {
-    .frame-container {
-      @apply rounded-xl overflow-hidden
-             bg-primary mx-2 my-4
-             flex flex-col-reverse
-             transition-all;
+    .frame-bg {
+      @apply rounded-xl
+             mx-8 my-8
+             flex flex-col-reverse;
     }
     
     .frame-container-noanim {
       @apply rounded-xl overflow-hidden
-             bg-primary mx-2 my-4
+             bg-primary mx-8 my-8
              flex flex-col-reverse
              transition-all;
     }

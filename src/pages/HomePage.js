@@ -26,24 +26,6 @@ const HomePage = () => (
             </p>
           </div>
         </div>
-        <div className="frame-container-noanim">
-          <div className="frame-body">
-            <h1>
-              Contact
-            </h1>
-            <p className="center">
-              <a href="https://prestosilver.itch.io">Itch</a><br/>
-              <a href="https://discord.com/invite/vrVVXktmfV">discord</a><br/>
-              <a href="https://www.youtube.com/channel/UCn3KTSGb3DbbGlS3hYGmsTA">Youtube</a><br/>
-              <a href="https://github.com/bob16795">Github</a><br/>
-              <a href="https://github.com/prestosilver">Github org</a><br/>
-              <a href="https://wakatime.com/@prestosilver">Wakatime</a><br/>
-              <a href="https://play.google.com/store/apps/dev?id=7954891124376186534">Google Play</a><br/>
-              <a href="https://store.steampowered.com/dev/presosilver">Steam</a><br/>
-              <a href="mailto:prestosilver.ptp@gmail.com">Email</a><br/>
-            </p>
-          </div>
-        </div>
         <h1>
           Recent
         </h1>
