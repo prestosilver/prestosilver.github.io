@@ -1,6 +1,6 @@
 ## About
 
-Budwm is a dwm mod that focuses on containers.
+Budwm is a DWM mod that focuses on containers.
 
 ## Install
 

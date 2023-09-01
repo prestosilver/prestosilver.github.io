@@ -1,6 +1,6 @@
 ## About
 
-Something I've wanted to do for a while is make a text editor, Slam finally brought an opertunity for this.
+Something I've wanted to do for a while is make a text editor, Slam finally brought an opportunity for this.
 
 ## Getting started
 

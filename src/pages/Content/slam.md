@@ -4,12 +4,12 @@ I've always wanted to make my own programming language, so here is the process.
 
 ## Inspiration
 
-- [porth](https://gitlab.com/tsoding/porth)
+- [Porth](https://gitlab.com/tsoding/porth)
 
 ## Planning
 
-Slam was always going to be a object oriented programming language, but I also wanted it to be concatinative.
-Originally Slam was supposed to be named slim, but that was taken by a html templating language.
+Slam was always going to be an object-oriented programming language, but I also wanted it to be concatinative.
+Originally, Slam was supposed to be named slim, but that was taken by a HTML templating language.
 
 ## Usage
 
@@ -159,5 +159,5 @@ end
 
 ## Links
 
-- [Github](https://github.com/slam-lang)
+- [GitHub](https://github.com/slam-lang)
 

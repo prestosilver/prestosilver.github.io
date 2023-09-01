@@ -1,6 +1,6 @@
 ## About
 
-Gin (Gameengine In Nim) is a game engine written in nim, but the more I look back at it the more I realize it was just a graphics & sound library. Yes it managed the game loop but it didnt manage anything else, resulting in the user essentially writing a whole engine ontop of gin.
+Gin (Game engine In Nim) is a game engine written in Nim, but the more I look back at it, the more I realize it was just a graphics & sound library. Yes it managed the game loop but it didn't manage anything else, resulting in the user essentially writing a whole engine on top of gin.
 
 ## Install
 

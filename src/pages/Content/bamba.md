@@ -30,4 +30,4 @@ def fib: proc idx -> i32 {
 
 # Links
 
-- [github](http://github.com/bob16795/bamba)
+- [GitHub](http://github.com/bob16795/bamba)

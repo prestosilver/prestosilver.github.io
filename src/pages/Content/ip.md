@@ -1,6 +1,6 @@
 ## About
 
-The G-Mod of Idle games, this allows for easy modding, in python and json. Never worry about finishing your current idle game, because this one never ends!
+The G-Mod of Idle games, this allows for easy modding, in python and JSON. Never worry about finishing your current idle game, because this one never ends!
 
 ## Features
 

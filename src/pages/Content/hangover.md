@@ -1,11 +1,11 @@
 ## About
 
-Hangover is a game engine based on Gin.
+Hangover is a game engine based on gin.
 The primary goals of hangover were:
 
-- Hangover will use opengl for graphics.
-- Hangover will have consistant naming.
-- Hangover will have a ui system.
+- Hangover will use OpenGL for graphics.
+- Hangover will have consistent naming.
+- Hangover will have an UI system.
 
 ## Install
 
