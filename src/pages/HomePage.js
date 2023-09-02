@@ -22,7 +22,7 @@ const HomePage = () => (
               I am fluent in writing in Zig, Nim, Python, Html, CSS, C, Cpp, C#, x86asm, z80asm, Markdown, GDScript, and Slam.
               I also have experience in Forth, Javascript, GLSL, Ruby, Rust, Lua and TS.
               I plan to learn Cobol, Haskell, and GoLang in the future.
-              There are many hobbies I enjoy including Crochet, Book binding, Bowling, Papercraft, Doodling, and Sewing.
+              There are many hobbies I enjoy including Book binding, Bowling, Papercraft, Doodling, and Sewing.
             </p>
           </div>
         </div>

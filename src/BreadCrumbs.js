@@ -42,7 +42,7 @@ const BreadCrumbs = () => {
     return (
       <div className="fixed top-0 left-16 h-8 w-screen m-0
                       flex flex-row content-center
-                      bg-med text-secondary shadow-lg">
+                      bg-act1 text-act2 shadow-lg">
         <div className="breadcrumb-divider" />
         <Link className="crumb" to="/">
           Prestosilver
@@ -54,7 +54,7 @@ const BreadCrumbs = () => {
   return  (
     <div className="fixed top-0 left-16 h-8 w-screen m-0
                     flex flex-row content-center
-                    bg-med text-secondary shadow-lg">
+                    bg-act1 text-act2 shadow-lg">
       <span className="breadcrumb-divider" />
       {crumbs.map(({ name, path }, key) =>
         key + 1 === crumbs.length ? (

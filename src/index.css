@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:wght@700,regular,bold,italic&subset=latin,latin-ext');
 
 @layer components {
   .error {
@@ -11,7 +11,7 @@
     flex-grow: 1;
   }
   .error h1 {
-    @apply text-secondary;
+    @apply text-act1;
   }
   .error a {
     @apply text-xl;
@@ -20,7 +20,8 @@
   .sidebar-icon:not(.active) {
     @apply relative flex items-center justify-center
            h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
-           bg-light hover:bg-secondary hover:text-white
+           text-ina2 bg-ina1
+           hover:bg-act1 hover:text-act2
            rounded-3xl hover:rounded-xl transition-all
            ease-linear;
   }
@@ -28,7 +29,7 @@
   .sidebar-icon.active {
     @apply relative flex items-center justify-center
            h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
-           bg-secondary text-white
+           bg-act1 text-act2
            rounded-xl transition-all
            ease-linear;
   }
@@ -36,25 +37,25 @@
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-2 min-w-max left-14
            rounded-md shadow-md
-           text-white bg-primary
+           text-fg bg-act1
            text-xs font-bold
            transition-all scale-0 origin-left;
   }
 
   .sidebar-divider {
-    @apply border-2 rounded-sm mr-2 ml-2 border-light;
+    @apply border-2 rounded-sm mr-2 ml-2 border-act3;
   }
 
   .breadcrumb-divider {
-    @apply border-2 rounded-sm mt-2 mb-2 border-light w-0;
+    @apply border-2 rounded-sm mt-2 mb-2 border-act3 w-0;
   }
 
   .crumb {
-    @apply m-4 content-center self-center;
+    @apply m-4 content-center self-center text-act2;
   }
 
   body {
-    @apply bg-light;
+    @apply bg-wall;
   }
 
   .main {
@@ -67,9 +68,8 @@
     margin-right: auto;
     padding-left: 5%;
     padding-right: 5%;
-    max-width: 1500px;
+    max-width: 1200px;
   }
-    
     
   .main-error {
     @apply fixed flex left-16 p-12 right-0 top-8 bottom-0
@@ -79,38 +79,44 @@
 
   h1 {
     @apply text-center text-white text-7xl m-8 mt-0 font-bold;
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto'; 
   }
   
   h2 {
     @apply text-white text-5xl mt-4 mb-4 font-bold text-center;
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto'; 
   }
   
   h3 {
     @apply text-white text-2xl mt-6 mb-0 font-bold;
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto'; 
+  }
+
+  .frame-bg a {
+    @apply no-underline;
   }
 
   a {
-    @apply text-secondary hover:underline;
+    @apply text-fg underline hover:bg-act1;
+    text-decoration-thickness: 2px;
   }
 
   p, li {
-    @apply text-white text-3xl;
-    font-family: 'Nunito Sans', cursive;
+    @apply text-white text-2xl font-bold;
+    font-family: 'Fira Mono'; 
   }
   
   .frame-bg {
     @apply rounded-xl 
-           bg-black
+           bg-[#00000050]
            m-8
            hover:shadow-lg;
   }
 
   .frame-container {
-    @apply rounded-xl overflow-hidden bg-primary
-           flex flex-row transition-all
+    @apply rounded-xl overflow-hidden bg-bg
+           flex flex-row-reverse transition-all
+            items-stretch
            w-[100%] h-[100%] transition-all;
   }
 
@@ -122,42 +128,39 @@
   
   .frame-container-noanim {
     @apply rounded-xl overflow-hidden
-           bg-primary m-8
+           bg-bg m-8
            flex flex-row;
   }
 
   .frame-desc h1 {
-    @apply bg-seclight m-0 text-2xl text-primary bg-secondary px-4; 
+    @apply m-0 text-2xl text-ina2 bg-ina1 px-4 border-4 rounded-tl-xl border-ina3; 
   }
 
   .frame-desc p {
-    @apply m-0 pl-8 pr-8 pt-1 pb-1 text-xl text-white; 
+    @apply m-0 pl-8 pr-8 pt-1 pb-1 text-xl text-fg rounded-bl-xl border-4 h-[auto] flex-auto border-t-0 text-fg border-ina3; 
+
   }
   
   .frame-desc {
-    @apply w-[50%];
+    @apply w-[50%] flex flex-col;
   }
   
   .frame-body h1 {
-    @apply bg-seclight m-0 text-2xl text-primary bg-secondary px-4; 
+    @apply m-0 text-2xl bg-ina1 text-ina2 px-4 border-4 rounded-t-xl border-ina3; 
   }
 
   .frame-body p {
-    @apply m-0 p-8 text-xl text-white; 
+    @apply m-0 p-8 text-xl text-fg rounded-b-xl border-4 border-t-0 border-ina3; 
   }
 
   .frame-body .center {
-    @apply text-center m-0 p-6 text-3xl text-white font-bold; 
-    font-family: 'Nunito Sans', cursive;
+    @apply text-center m-0 p-6 text-3xl text-ina2 font-bold; 
+    font-family: 'Fira Mono', bold;
     columns: 3;
   }
   
   .frame-body {
-    @apply w-[100%];
-  }
-
-  a:nth-child(odd) .frame-container {
-    @apply flex-row-reverse;
+    @apply w-[100%] ;
   }
   
   .frame-image {
@@ -165,11 +168,11 @@
   }
  
   .frame-image img {
-    @apply w-[100%];
+    @apply h-[100%] w-[100%] border-4 rounded-r-xl border-l-0 border-ina3;
+    object-fit: cover;
   }
 
   ul {
-    @apply text-white;
     list-style-type: circle;
     list-style-position: inside;
   }
@@ -179,16 +182,16 @@
   }
 
   pre {
-    @apply bg-primary mt-4 mb-2 p-4 overflow-auto rounded-xl;
+    @apply bg-bg mt-4 mb-2 p-4 overflow-auto rounded-xl;
   }
  
   pre code {
-    @apply text-white bg-primary rounded-lg;
+    @apply text-fg bg-bg rounded-lg;
     padding: 0px;
   }
 
   code {
-    @apply text-white bg-primary rounded-lg px-2;
+    @apply text-fg bg-bg rounded-lg px-2;
   }
 
   @media only screen and (max-width: 900px) {
@@ -200,13 +203,20 @@
     
     .frame-container-noanim {
       @apply rounded-xl overflow-hidden
-             bg-primary mx-8 my-8
+             mx-8 my-8
              flex flex-col-reverse
+             items-stretch
              transition-all;
     }
   
     .frame-image {
       @apply w-[100%];
+    }
+  
+    .frame-image img {
+      border-width: 4px;
+      border-top-width: 0px;
+      @apply rounded-xl rounded-t-none;
     }
   
     .frame-desc {
@@ -218,24 +228,24 @@
     }
     
     .frame-body .center {
-      @apply text-center m-0 p-6 text-base text-white font-bold;   
+      @apply text-center m-0 p-6 text-base font-bold;   
       columns: 2;
     }
 
     .frame-body p {
-      @apply m-0 p-4 text-base text-white; 
+      @apply m-0 p-4 text-base rounded-xl rounded-t-none; 
     }
 
     .frame-desc p {
-      @apply m-0 p-4 text-base text-white; 
+      @apply m-0 p-4 text-base rounded-none; 
     }
 
     .frame-body h1 {
-      @apply text-xl; 
+      @apply text-xl rounded-xl rounded-b-none; 
     }
 
     .frame-desc h1 {
-      @apply text-xl; 
+      @apply text-xl rounded-xl rounded-b-none; 
     }
 
     h1 {
