@@ -104,6 +104,8 @@
   p, li {
     @apply text-white text-2xl font-bold;
     font-family: 'Fira Mono'; 
+    text-align: justify;
+    text-justify: inter-word;
   }
   
   .frame-bg {
