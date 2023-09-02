@@ -1,6 +1,6 @@
 # About
 
-A remake of my programming language bamba.
+A remake of my programming language, bamba.
 
 # Syntax
 
@@ -46,4 +46,4 @@ def main: mainBuilderBuilder(i32).buildMain(0);
 
 # Links
 
-- [github](http://github.com/bob16795/bamba)
+- [GitHub](http://github.com/bob16795/bamba)

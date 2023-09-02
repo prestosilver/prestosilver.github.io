@@ -4,7 +4,7 @@ Chesker is a chess engine, with pieces from other board games. I plan to expand 
 
 ## About
 
-Chesker is the culmination of as many boardgames as I could fit into 1 game as possilble. 
+Chesker is the culmination of as many board games as I could fit into 1 game as possible. 
 
 ## Motivation
 
@@ -17,7 +17,7 @@ Chesker seemed like a good first project for the new game engine I have been wor
 
 ## Other Features
 
-- p2p multiplayer
+- P2P multiplayer
 - an AI that can play with any custom piece you add
-- fully customisable boards and pieces
+- fully customizable boards and pieces
 - more on the way!

@@ -1,6 +1,6 @@
 ## About
 
-Markup is a document compiler written completly in nim.
+Markup is a document compiler written completely in Nim.
 
 ## Install
 
@@ -18,11 +18,11 @@ $ markup [options] [file1 file2 ...]
 
 ## Basic usage
 
-Markup has all the basic syntax as markdown see [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for a refrence. 
+Markup has all the basic syntax as Markdown see [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for a reference. 
 
 ## Advanced features
 
-Markup has a document property system that allows you to define a variable and refrence it later, an example of a document property section is as follows:
+Markup has a document property system that allows you to define a variable and reference it later, an example of a document property section is as follows:
 
 ```
 ---
