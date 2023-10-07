@@ -9,7 +9,7 @@ A remake of my programming language, bamba.
 ```bamba2
 def printf: extfn -> void;
 
-def main: proc -> i32 {
+fdef main: proc -> i32 {
     printf("Hello World!");
     
     return i32(0);
@@ -41,8 +41,13 @@ def mainBuilderBuilder: proc T -> class {
     } 
 }
 
-def main: mainBuilderBuilder(i32).buildMain(0);
+fdef main: mainBuilderBuilder(i32).buildMain(0);
 ```
+
+# Reflection
+
+- fdef and extfn are dumb keywords, problaby should split them into modifiers.
+- Its obnoxious to use ~(\*value) to invert a dereferenced value.
 
 # Links
 
