@@ -5,6 +5,7 @@ import p4 from "./pages/Images/p4.png";
 import p5 from "./pages/Images/p5.png";
 import p6 from "./pages/Images/p6.png";
 import p7 from "./pages/Images/p7.png";
+import p11 from "./pages/Images/p11.png";
 import p1text from "./pages/Content/hangover.md"
 import p2text from "./pages/Content/markup.md"
 import p3text from "./pages/Content/budwm.md"
@@ -14,6 +15,8 @@ import p6text from "./pages/Content/sandeee.md"
 import p7text from "./pages/Content/budland.md"
 import p8text from "./pages/Content/bamba.md"
 import p9text from "./pages/Content/bamba2.md"
+import p10text from "./pages/Content/bamba3.md"
+import p11text from "./pages/Content/cloudyflight.md"
 
 import g1 from "./pages/Images/g1.png";
 import g2 from "./pages/Images/g2.png";
@@ -34,6 +37,8 @@ import b1text from "./pages/Content/posts/flashdrive-1.md"
 import b2text from "./pages/Content/posts/organize-1.md"
 
 const projects = [
+    { short: "bamba-3", kind: 'project', image: null, name: "Bamba3 - The OP one", desc: "Remaking my language to learn more rust.", file: p10text },
+    { short: "cloudyflight-1", kind: 'project', image: p11, name: "Cloudy flight", desc: "Cloud rendering to learn rust. How hard could it be. Spoiler: Hard.", file: p11text },
     { short: "darkmatter-1", kind: 'game', image: g7, name: "Dark Matter, Vanquish The Darkness With Your Light!", desc: "A shmup made for 1bit jam", file: g7text },
     { short: "bamba-2", kind: 'project', image: null, name: "Bamba2, A zig based programming language.", desc: "Another attempt at making a llvm based lang.", file: p9text },
     { short: "budland-1", kind: 'project', image: p7, name: "Budland, A Wayland window manager.", desc: "Budwm was too slow so Wayland + Zig.", file: p7text },
