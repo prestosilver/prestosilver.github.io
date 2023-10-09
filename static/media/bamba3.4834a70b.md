@@ -14,6 +14,9 @@ def a: !(5 == 0);
 // void type is now capitalized for consistancy
 force def main: fn[] -> Void;
 
+// replace extfn with extern fn
+extern fn printf: fn[] -> Void;
+
 // function parameters are cleaner
 def cls: class {
     def a: fn[self: *Self] -> Void;
@@ -28,6 +31,7 @@ def b: !!(5 == 0);
 - It problaby wouldve been cleaner to use operator overides for Values.
 - I couldve combined the Node and Value enums.
 - Problaby shouldnt force casting, type infrencing bamba4?
+- Comptime & emit expressions have weird syntax sometimes
 
 # Links
 
