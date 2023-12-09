@@ -44,7 +44,7 @@ Along these lines, obfuscation can also use alternative control flows which end 
 
 ### Supports Closed Source
 
-Finally, you may know I'm a big supporter of [Open Source Software](github.com/bob16795).
+Finally, you may know I'm a big supporter of [Open Source Software](http://github.com/bob16795).
 A major issue with obfuscation is its obvious promotion of closed source software. 
 Though you may argue that the competition gained by proprietary software is beneficial, I found no substantial research to support this.
 
