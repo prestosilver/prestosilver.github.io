@@ -35,8 +35,10 @@ import g7text from "./pages/Content/darkmatter.md"
 
 import b1text from "./pages/Content/posts/flashdrive-1.md"
 import b2text from "./pages/Content/posts/organize-1.md"
+import b3text from "./pages/Content/posts/obfuscation-1.md"
 
 const projects = [
+    { short: "obfuscation-1", kind: 'post', image: null, name: "Obfuscation", desc: "TODO", file: b3text },
     { short: "bamba-3", kind: 'project', image: null, name: "Bamba3 - The OP one", desc: "Remaking my language to learn more rust.", file: p10text },
     { short: "cloudyflight-1", kind: 'project', image: p11, name: "Cloudy flight", desc: "Cloud rendering to learn rust. How hard could it be. Spoiler: Hard.", file: p11text },
     { short: "darkmatter-1", kind: 'game', image: g7, name: "Dark Matter, Vanquish The Darkness With Your Light!", desc: "A shmup made for 1bit jam", file: g7text },
