@@ -38,7 +38,8 @@ import b2text from "./pages/Content/posts/organize-1.md"
 import b3text from "./pages/Content/posts/obfuscation-1.md"
 
 const projects = [
-    { short: "obfuscation-1", kind: 'post', image: null, name: "Obfuscation", desc: "TODO", file: b3text },
+    { short: "bugz-1", kind: 'game', image: g2, name: "Bugz Bows and Curses", desc: "Bugz Bows and Curses is a procedurally generated rougelike revolving around completing Collections.", file: g2text },
+    { short: "obfuscation-1", kind: 'post', image: null, name: "Obfuscation", desc: "Good or bad?", file: b3text },
     { short: "bamba-3", kind: 'project', image: null, name: "Bamba3 - The OP one", desc: "Remaking my language to learn more rust.", file: p10text },
     { short: "cloudyflight-1", kind: 'project', image: p11, name: "Cloudy flight", desc: "Cloud rendering to learn rust. How hard could it be. Spoiler: Hard.", file: p11text },
     { short: "darkmatter-1", kind: 'game', image: g7, name: "Dark Matter, Vanquish The Darkness With Your Light!", desc: "A shmup made for 1bit jam", file: g7text },
@@ -49,7 +50,6 @@ const projects = [
     { short: "slam-1", kind: 'project', image: p5, name: "Slam lang", desc: "An Object Oriented Concatanative Programming language.", file: p5text },
     { short: "files-1", kind: 'post', image: null, name: "How I keep my linux filesystem organized to prevent losing files", desc: "I swear, it's not as boring as it sounds.", file: b2text },
     // { short: "flashdrive-1", kind: 'post', image: null, name: "Making a raspberry pi based smart flashdrive", desc: "A flashdrive that sorts its self, impossible? Ask buildroot.", file: b1text},
-    { short: "bugz-1", kind: 'game', image: g2, name: "Bugz Bows and Curses", desc: "Bugz Bows and Curses is a procedurally generated rougelike revolving around completing Collections.", file: g2text },
     { short: "chesker-1", kind: 'game', image: g3, name: "Chesker", desc: "Chesker is a chess engine that supports more than chess", file: g3text },
     { short: "hangover-1", kind: 'project', image: p1, name: "Hangover", desc: "Hangover is a full rewrite of gin which uses OpenGl as the graphics backend.", file: p1text },
     { short: "ctl-2", kind: 'game', image: g4, name: "Click To Lose -", desc: "Click To Lose Minus was a remake of my first IDLE game.", file: g4text },
