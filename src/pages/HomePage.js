@@ -41,6 +41,7 @@ const HomePage = () => (
               <a href="https://play.google.com/store/apps/dev?id=7954891124376186534">Google Play</a><br/>
               <a href="https://store.steampowered.com/dev/presosilver">Steam</a><br/>
               <a href="mailto:prestosilver.ptp@gmail.com">Email</a><br/>
+              <a href="https://www.linkedin.com/in/prestosilver/">Linkedin</a><br/>
             </p>
           </div>
         </div>
